@@ -1,5 +1,5 @@
 import css from './User.module.css'
-
+import PropTypes from 'prop-types';
 
 export function Stats ({followers, views, likes}) {
     return (
@@ -18,4 +18,10 @@ export function Stats ({followers, views, likes}) {
     </li>
   </ul>
     )
+}
+
+Stats.propTypes = {
+  followers: PropTypes.number.isRequired,
+  views: PropTypes.number.isRequired,
+  likes: PropTypes.number.isRequired
 }
