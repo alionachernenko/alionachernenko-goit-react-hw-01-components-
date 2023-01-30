@@ -17,6 +17,7 @@ gap: 5px;
 font-weight: 500;
 color: rgb(39, 39, 39);
 font-size: 20px;
+background-color: ${props => props.color}
 `
 export const StatisticsSection = styled.section `
     width: 332px;

@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { getRandomHexColor } from 'components/makeRandomColor';
 
 import { StatisticsSection, Title, List, Item, Label, Percentage} from "./Statistics.styled";
 
@@ -8,7 +9,7 @@ export function Statistics ({title, stats}) {
            { title && <Title>{title}</Title>}
             <List>
                 {stats.map(({id, label, percentage}) => (
-                    <Item key={id}>
+                    <Item key={id} color={getRandomHexColor()}>
                         <Label>{label}</Label>
                         <Percentage>{percentage}%</Percentage>
                     </Item>
