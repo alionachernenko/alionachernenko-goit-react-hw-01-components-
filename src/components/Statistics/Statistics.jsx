@@ -1,14 +1,28 @@
-import { Title } from "./Title";
-import { List } from "./List";
-import stats from '../../data/data.json'
+import PropTypes from 'prop-types';
 
-import { StatisticsSection } from "./Statistics.styled";
+import { StatisticsSection, Title, List, Item, Label, Percentage} from "./Statistics.styled";
 
-export function Statistics () {
+export function Statistics ({stats, title}) {
     return (
         <StatisticsSection>
-            <Title title='Upload stats'/>
-            <List stats={stats}/>
+           { title && <Title>{title}</Title>}
+            <List>
+                {stats.map(({id, label, percentage}) => (
+                    <Item key={id}>
+                        <Label>{label}</Label>
+                        <Percentage>{percentage}%</Percentage>
+                    </Item>
+                ))}
+            </List>
         </StatisticsSection>
     )
+}
+
+Statistics.propTypes = {
+    stats: PropTypes.arrayOf(PropTypes.exact({
+        id: PropTypes.string.isRequired,
+        label: PropTypes.string.isRequired,
+        percentage: PropTypes.number.isRequired,
+    })).isRequired,
+    title: PropTypes.string
 }

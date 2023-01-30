@@ -29,7 +29,7 @@ export const Location = styled.p `
     color: dimgrey;
 `
 
-export const Profile = styled.div `
+export const User = styled.div `
     width: fit-content;
     background-color: rgb(248, 248, 248);
     display: flex;
@@ -53,10 +53,10 @@ export const Stat = styled.li `
 `
 
 export const StatName = styled.span `
-color: dimgrey;
+    color: dimgrey;
 `
 
 export const Quantity = styled.span `
-font-weight: 700;
-font-size: 20px;
+    font-weight: 700;
+    font-size: 20px;
 `

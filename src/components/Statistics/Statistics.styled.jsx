@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const StatisticsList = styled.ul`
+export const List = styled.ul`
 display: flex;
 flex-wrap: wrap;
 background-color: aliceblue;
@@ -22,10 +22,17 @@ export const StatisticsSection = styled.section `
     width: 332px;
 `
 
-export const TitleContent = styled.h2 `
+export const Title = styled.h2 `
 padding: 50px;
     text-align: center;
     background-color: rgb(243, 244, 255);
     text-transform: uppercase;
     color: rgb(39, 39, 39);
+`
+
+export const Label = styled.span `
+font-size: 20px
+`
+export const Percentage = styled.span ` 
+font-size: 20px
 `

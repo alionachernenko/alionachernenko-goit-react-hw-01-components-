@@ -1,13 +1,16 @@
 import styled from "@emotion/styled";
 
-export const FriendsList = styled.ul `
+
+export const List = styled.ul `
     display: flex;
     flex-direction: column;
     gap: 5px;
     width: 332px;
 `
-
-export const FriendItem = styled.li `
+export const Avatar = styled.img ` 
+    width: 48px
+`
+export const Item = styled.li `
     display: flex;
     align-items: center;
     gap: 20px;

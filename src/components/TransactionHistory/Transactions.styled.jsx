@@ -17,7 +17,7 @@ height: 50px;
 text-align: center;
 text-transform: capitalize;
 
-&:nth-child(2n){
+&:nth-of-type(2n){
     background-color: rgb(216, 216, 216);
 }
 `
@@ -27,4 +27,7 @@ width: 500px;
 font-weight: 400;
 height: 50px;
 text-align: center;
+`
+export const Table = styled.table `
+max-width: 700px
 `
