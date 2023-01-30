@@ -1,13 +1,14 @@
 import { Title } from "./Title";
 import { List } from "./List";
 import stats from '../../data/data.json'
-import css from './Statistics.module.css'
+
+import { StatisticsSection } from "./Statistics.styled";
 
 export function Statistics () {
     return (
-        <section className={css.statistics}>
+        <StatisticsSection>
             <Title title='Upload stats'/>
             <List stats={stats}/>
-        </section>
+        </StatisticsSection>
     )
 }

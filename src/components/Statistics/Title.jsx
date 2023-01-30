@@ -1,9 +1,9 @@
-import css from './Statistics.module.css'
 import PropTypes from 'prop-types';
+import { TitleContent } from './Statistics.styled';
 
 export function Title ({title}) {
     if(title) return (
-         <h2 className={css.title}>{title}</h2>
+         <TitleContent>{title}</TitleContent>
         )
 }
 

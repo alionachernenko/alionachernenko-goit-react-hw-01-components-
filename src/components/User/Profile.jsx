@@ -1,11 +1,11 @@
 import { Info } from './Info'
 import { Stats } from './Stats'
 import data from '../../data/user.json'
-import css from './User.module.css'
+import { Profile } from './User.styled'
 
-export function Profile () {
+export function User () {
    return (
-    <div className={css.profile}>
+    <Profile>
         <Info 
             username={data.username}
             tag={data.tag}
@@ -17,6 +17,6 @@ export function Profile () {
             views={data.stats.views}
             likes={data.stats.views}
         />
-    </div>
+    </Profile>
 )
 }

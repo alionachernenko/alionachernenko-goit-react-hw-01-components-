@@ -1,20 +1,19 @@
-import css from './Statistics.module.css'
 import PropTypes from 'prop-types';
-
+import { StatisticsList, Item } from './Statistics.styled';
 
 export function List ({stats}) {
     return (
-        <ul className={css.statList}>
+        <StatisticsList>
             {stats.map(stat => 
                 (
-                    <li key={stat.id} className={css.item} style={{
+                    <Item key={stat.id} style={{
                         backgroundColor: getRandomHexColor(),
                       }}>
-                        <span  className={css.lable}>{stat.label}</span>
-                        <span className={css.percentage}>{stat.percentage}%</span>
-                    </li>
+                        <span>{stat.label}</span>
+                        <span>{stat.percentage}%</span>
+                    </Item>
                 ))}
-        </ul>
+        </StatisticsList>
     )
 }
 

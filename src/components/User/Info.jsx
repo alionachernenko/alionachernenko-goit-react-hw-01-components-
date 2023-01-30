@@ -1,18 +1,17 @@
-import css from './User.module.css'
 import PropTypes from 'prop-types';
+import { Description, Avatar, Name, Tag, Location } from './User.styled';
 
 export function Info ({username, tag, location, avatar}) {
     return (
-        <div className={css.description}>
-            <img
+        <Description>
+            <Avatar
             src={avatar}
             alt="User avatar"
-            className={css.avatar}
             />
-            <p className={css.name}>{username}</p>
-            <p className={css.tag}>@{tag}</p>
-            <p className={css.location}>{location}</p>
-        </div>
+            <Name>{username}</Name>
+            <Tag>@{tag}</Tag>
+            <Location>{location}</Location>
+        </Description>
     )
 }
 

@@ -1,22 +1,22 @@
-import css from './User.module.css'
 import PropTypes from 'prop-types';
+import { StatsList, Stat, StatName, Quantity } from './User.styled';
 
 export function Stats ({followers, views, likes}) {
     return (
-        <ul className={css.stats}>
-    <li className={css.statsItem}>
-      <span className={css.label}>Followers</span>
-      <span className={css.quantity}>{followers}</span>
-    </li>
-    <li className={css.statsItem}>
-      <span className={css.label}>Views</span>
-      <span className={css.quantity}>{views}</span>
-    </li>
-    <li className={css.statsItem}>
-      <span className={css.label}>Likes</span>
-      <span className={css.quantity}>{likes}</span>
-    </li>
-  </ul>
+        <StatsList>
+    <Stat>
+      <StatName>Followers</StatName>
+      <Quantity>{followers}</Quantity>
+    </Stat>
+    <Stat>
+      <StatName>Views</StatName>
+      <Quantity>{views}</Quantity>
+    </Stat>
+    <Stat>
+      <StatName>Likes</StatName>
+      <Quantity>{likes}</Quantity>
+    </Stat>
+  </StatsList>
     )
 }
 
