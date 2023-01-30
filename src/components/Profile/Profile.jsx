@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { Description, User, Avatar, Name, Tag, Location, StatsList, Stat, StatName, Quantity} from './Profile.styled'
 
-export function Profile ({username, tag, location, avatar, followers, views, likes}) {
+export function Profile ({username, tag, location, avatar, stats: { followers, views, likes}}) {
    return (
     <User>
         <Description>

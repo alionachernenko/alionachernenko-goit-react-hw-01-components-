@@ -6,7 +6,7 @@ flex-wrap: wrap;
 background-color: aliceblue;
 `
 
-export const Item = styled.ul `
+export const Item = styled.li `
 display: flex;
 align-items: center;
 justify-content: center;

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 import { StatisticsSection, Title, List, Item, Label, Percentage} from "./Statistics.styled";
 
-export function Statistics ({stats, title}) {
+export function Statistics ({title, stats}) {
     return (
         <StatisticsSection>
            { title && <Title>{title}</Title>}
