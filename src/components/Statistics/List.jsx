@@ -1,5 +1,7 @@
 import css from './Statistics.module.css'
 import PropTypes from 'prop-types';
+
+
 export function List ({stats}) {
     return (
         <ul className={css.statList}>
@@ -21,6 +23,7 @@ function getRandomHexColor() {
     return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
+
 List.propTypes = {
     stats: PropTypes.arrayOf(PropTypes.exact({
         id: PropTypes.string.isRequired,
@@ -28,3 +31,4 @@ List.propTypes = {
         percentage: PropTypes.number.isRequired
     }))
 }
+
